@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package oo.exe01;
 
 import javax.swing.JOptionPane;
@@ -21,9 +17,13 @@ public class TestaAluno {
     
     Aluno obj1 = new Aluno(auxNumeroaluno,auxNome, auxIdade, auxProva1, auxProva2);
     // chamar os métodos
-    obj1.notaFinal();
+    
+    
+    JOptionPane.showMessageDialog(null, obj1.passou());
+    
     obj1.dadosAluno();
-    obj1.passou();
+    
+    JOptionPane.showMessageDialog(null, "Média: " + obj1.notaFinal());
     
     
     

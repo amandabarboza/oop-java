@@ -15,22 +15,22 @@ public class TestaProduto {
         int auxQtde = Integer.parseInt(JOptionPane.showInputDialog("Infome a quantidade em estoque: "));
         float auxPreco = Float.parseFloat(JOptionPane.showInputDialog("Informe o preço: "));
         
-    Produto obj1 = new Produto(auxId, auxDescricao, auxQtde, auxPreco);
+    Produto product1 = new Produto(auxId, auxDescricao, auxQtde, auxPreco);
     
     //chamar os métodos
-    obj1.mostrar();
+    product1.toShow();
     
-    obj1.comprar(5);
-    obj1.mostrar();
+    product1.toBuy(5);
+    product1.toShow();
     
-    obj1.vender(10);
-    obj1.mostrar();
+    product1.toSell(10);
+    product1.toShow();
     
-    obj1.subir(20);
-    obj1.mostrar();
+    product1.priceUp(20);
+    product1.toShow();
     
-    obj1.descer(40);
-    obj1.mostrar();
+    product1.priceDown(40);
+    product1.toShow();
     
     
     // criando o segundo objeto
@@ -41,19 +41,19 @@ public class TestaProduto {
         
     Produto obj2 = new Produto(auxId, auxDescricao, auxQtde, auxPreco);
     
-    obj2.mostrar();
+    obj2.toShow();
             
-    obj2.comprar(10);
-    obj2.mostrar();
+    obj2.toBuy(10);
+    obj2.toShow();
     
-    obj2.vender(20);
-    obj2.mostrar();
+    obj2.toSell(20);
+    obj2.toShow();
     
-    obj2.subir(500);
-    obj2.mostrar();
+    obj2.priceUp(500);
+    obj2.toShow();
     
-    obj2.descer(70);
-    obj2.mostrar();
+    obj2.priceDown(70);
+    obj2.toShow();
             
     }
 }

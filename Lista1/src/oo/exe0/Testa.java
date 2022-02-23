@@ -22,7 +22,7 @@ public class Testa {
         auxMotor = (opcao == JOptionPane.OK_OPTION); //se é true ou false
         
         
-        Carro obj1 = new Carro(auxModelo, auxAno, auxVel, auxMotor);
+        Carro obj1 = new Carro(auxModelo, auxAno, auxVel, auxMotor); // this representa obj1
         // chamar os métodos
         obj1.mostrar();
         
@@ -52,7 +52,8 @@ public class Testa {
         auxAno = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano:"));
         auxVel = Float.parseFloat(JOptionPane.showInputDialog("Informe a velocidade:"));
         opcao = JOptionPane.showConfirmDialog(null, "Carro está ligado?");
-        Carro obj2 = new Carro(auxModelo, auxAno, auxVel, auxMotor);
+        
+        Carro obj2 = new Carro(auxModelo, auxAno, auxVel, auxMotor); // this representa obj2
         
         obj2.mostrar();
         

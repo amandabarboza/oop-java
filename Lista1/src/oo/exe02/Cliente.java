@@ -22,25 +22,25 @@ public class Cliente {
     {
         
     }
-    Cliente(int nC, int nA, String nm, float sd)
+    Cliente(int numeroConta, int numeroAgencia, String nome, float saldo)
     {
-        numeroConta = nC;
-        numeroAgencia = nA;
-        nome = nm;
-        saldo = sd;
+        this.numeroConta = numeroConta;
+        this.numeroAgencia = numeroAgencia;
+        this.nome = nome;
+        this.saldo = saldo;
     }
     
     void realizarDeposito(float x)
     {
-        saldo += x;
+        this.saldo += x;
     }
-    void realizarSaque(float x)
+    void toWithdraw(float x)
     {
-        saldo -= x;
+        this.saldo -= x;
     }
     void mostrar()
     {
-        JOptionPane.showMessageDialog(null,"\nNúmero da conta: " + numeroConta + "\nNúmero da agência: " + numeroAgencia + "\nNome: " + nome + "\nSaldo: R$" + saldo);
+        JOptionPane.showMessageDialog(null,"\nNúmero da conta: " + this.numeroConta + "\nNúmero da agência: " + this.numeroAgencia + "\nNome: " + this.nome + "\nSaldo: R$" + this.saldo);
     }
     
     

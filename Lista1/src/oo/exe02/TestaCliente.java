@@ -15,15 +15,15 @@ public class TestaCliente {
         String auxNome = JOptionPane.showInputDialog("Informe o nome:");
         float auxSaldo = Float.parseFloat(JOptionPane.showInputDialog("Informe o saldo: "));
     
-    Cliente obj1 = new Cliente(auxNumeroconta, auxNumeroagencia, auxNome, auxSaldo);
+    Cliente client1 = new Cliente(auxNumeroconta, auxNumeroagencia, auxNome, auxSaldo);
     // chamar os métodos
-    obj1.mostrar();
+    client1.mostrar();
     
-    obj1.realizarDeposito(50);
-    obj1.mostrar();
+    client1.realizarDeposito(50);
+    client1.mostrar();
     
-    obj1.realizarSaque(30);
-    obj1.mostrar();
+    client1.toWithdraw(30);
+    client1.mostrar();
     
     
     // criar o objeto 2
@@ -32,15 +32,15 @@ public class TestaCliente {
     auxNome = JOptionPane.showInputDialog("Informe o nome:");
     auxSaldo = Float.parseFloat(JOptionPane.showInputDialog("Informe o saldo: "));
     
-    Cliente obj2 = new Cliente(auxNumeroconta, auxNumeroagencia, auxNome, auxSaldo);
+    Cliente client2 = new Cliente(auxNumeroconta, auxNumeroagencia, auxNome, auxSaldo);
     
-    obj2.mostrar();
+    client2.mostrar();
     
-    obj2.realizarDeposito(200);
-    obj2.mostrar();
+    client2.realizarDeposito(200);
+    client2.mostrar();
     
-    obj2.realizarSaque(500);
-    obj2.mostrar();
+    client2.toWithdraw(500);
+    client2.mostrar();
     }
     
 }

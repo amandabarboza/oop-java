@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package oo.exe01;
 
 import javax.swing.JOptionPane;
@@ -13,37 +9,44 @@ import javax.swing.JOptionPane;
 public class Aluno 
 {
     // declaração das variáveis
-    int numeroAluno;
+    int numeroAluno, idade;
     String nome;
-    int idade;
-    float prova1;
-    float prova2;
+    float prova1, prova2;
     
     
     //método construtor
-    Aluno()
+    public Aluno()
     {
         
     }
-    Aluno(int nA, String nm, int id, float p1, float p2)
+    public Aluno(int numeroAluno, String nome, int idade, float prova1, float prova2)
     {
-        numeroAluno = nA;
-        nome = nm;
-        idade = id;
-        prova1 = p1;
-        prova2 = p2;              
+        this.numeroAluno = numeroAluno;
+        this.nome = nome;
+        this.idade = idade;
+        this.prova1 = prova1;
+        this.prova2 = prova2;              
     }
     
-    void notaFinal()
+    float notaFinal()
+    {
+        return (this.prova1 + this.prova2)/2;
+    }
+    /* public void notaFinal()
     {
         float media = (prova1 + prova2)/2;
         JOptionPane.showMessageDialog(null,"Sua média foi:" + media);
-    }
-    void dadosAluno()
+    } */
+    public void dadosAluno()
     {
-        JOptionPane.showMessageDialog(null,"\nNúmero do aluno " + numeroAluno + "\nNome: " + nome + "\nIdade: " + idade);
+        JOptionPane.showMessageDialog(null,"\nNúmero do aluno " + this.numeroAluno + "\nNome: " + this.nome + "\nIdade: " + this.idade);
     }
-    void passou()
+    
+    String passou()
+    {
+        return (this.notaFinal() >= 6) ? "Aprovado" : "Reprovado";
+    }
+    /*public void passou()
     {
         if (((prova1 + prova2)/2)>= 6)
         {
@@ -53,8 +56,6 @@ public class Aluno
         {
             JOptionPane.showMessageDialog(null,"Você não passou! :c");
         }
-    }
-
-    
+    } */  
             
 }

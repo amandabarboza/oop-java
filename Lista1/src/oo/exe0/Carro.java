@@ -25,35 +25,36 @@ public class Carro
     {
         
     }
-    Carro(String md, int an, float ve, boolean mt)
+    Carro(String modelo, int ano, float velocidade, boolean motor)
     {
-        modelo = md;
-        ano = an;
-        velocidade = ve;
-        motor = mt;
+        this.modelo = modelo; //this representa o objeto q chama o método, o separando do segundo 'modelo' q eh parametro
+        this.ano = ano;
+        this.velocidade = velocidade;
+        this.motor = motor;
     }
     
     // métodos
     // void pois o metodo n retorna nd (n tem o 'return')
     void ligar() 
     {
-        motor = true;
+        this.motor = true;
     }
     void desligar() 
     {
-        motor = false;
+        this.motor = false;
+        this.velocidade =0;
     }
     void acelerar(float x)
     {
-        velocidade += x;
+        this.velocidade += x;
     }
     void frear(float x)
     {
-        velocidade -=x;
+        this.velocidade -=x;
     }
     void mostrar()
     {
     //System.out.println("\nModelo: " + modelo + "\nAno: " + ano + "\nVel: " + velocidade + "\nMotor: " + motor); -> para printar na tela
-        JOptionPane.showMessageDialog(null,"\nModelo: " + modelo + "\nAno: " + ano + "\nVel: " + velocidade + "\nMotor: " + motor);
+        JOptionPane.showMessageDialog(null,"\nModelo: " + this.modelo + "\nAno: " + this.ano + "\nVel: " + this.velocidade + "\nMotor: " + this.motor);
     }
 }
